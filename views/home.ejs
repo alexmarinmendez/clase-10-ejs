@@ -1,3 +1,13 @@
 <%- include('./partials/head') %>
 <h1>Hola Mundo!!</h1>
-<p><%=mensaje%></p>
+<ul>
+    <% alumnos.forEach(element => { %>
+        <li><%=element.lname%>, <%=element.fname%>
+        <% if (element.age) { %>
+         👉 <%=element.age%>
+        <% } else { %>
+            (dato no especificado)
+        <% } %>
+        </li>
+    <% }) %>
+</ul>
